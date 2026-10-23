@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy - TubeKit: Mobile Creator Toolkit</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #DC2626;
+      --primary-dark: #B91C1C;
+      --text-main: #18181B;
+      --text-muted: #71717A;
+      --bg-page: #FAFAFA;
+      --bg-card: #FFFFFF;
+      --border: #E4E4E7;
+      --ring: rgba(220, 38, 38, 0.15);
+    }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background-color: var(--bg-page);
+      color: var(--text-main);
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+    }
+    .header {
+      background: #FFFFFF;
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      backdrop-filter: blur(8px);
+      background-color: rgba(255, 255, 255, 0.95);
+    }
+    .header-inner {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 16px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+      color: var(--text-main);
+    }
+    .brand-icon {
+      width: 36px;
+      height: 36px;
+      background: linear-gradient(135deg, #DC2626, #991B1B);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #FFFFFF;
+      box-shadow: 0 4px 12px rgba(220, 38, 38, 0.25);
+    }
+    .brand-title {
+      font-size: 17px;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+    }
+    .brand-title span {
+      color: var(--primary);
+    }
+    .badge {
+      font-size: 11px;
+      font-weight: 700;
+      background: #FEE2E2;
+      color: #991B1B;
+      padding: 4px 10px;
+      border-radius: 9999px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    .container {
+      max-width: 860px;
+      margin: 32px auto 64px auto;
+      padding: 0 20px;
+    }
+    .card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 40px;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.03);
+    }
+    @media (max-width: 640px) {
+      .card {
+        padding: 24px 20px;
+        border-radius: 16px;
+      }
+    }
+    .hero {
+      margin-bottom: 32px;
+      padding-bottom: 24px;
+      border-bottom: 1px solid var(--border);
+    }
+    .hero h1 {
+      font-size: 28px;
+      font-weight: 800;
+      letter-spacing: -0.025em;
+      margin-bottom: 8px;
+    }
+    .meta {
+      font-size: 13px;
+      color: var(--text-muted);
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+    .meta strong {
+      color: var(--text-main);
+    }
+    .alert {
+      background: #FFFBEB;
+      border: 1px solid #FDE68A;
+      color: #92400E;
+      padding: 16px;
+      border-radius: 12px;
+      margin-bottom: 28px;
+      font-size: 13px;
+      line-height: 1.5;
+    }
+    .alert strong {
+      color: #78350F;
+    }
+    h2 {
+      font-size: 19px;
+      font-weight: 700;
+      margin-top: 32px;
+      margin-bottom: 12px;
+      color: var(--text-main);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    h2::before {
+      content: '';
+      display: inline-block;
+      width: 4px;
+      height: 18px;
+      background: var(--primary);
+      border-radius: 2px;
+    }
+    h3 {
+      font-size: 15px;
+      font-weight: 600;
+      margin-top: 18px;
+      margin-bottom: 8px;
+      color: var(--text-main);
+    }
+    p {
+      margin-bottom: 14px;
+      font-size: 14.5px;
+      color: #3F3F46;
+    }
+    ul, ol {
+      margin-left: 20px;
+      margin-bottom: 16px;
+    }
+    li {
+      margin-bottom: 6px;
+      font-size: 14px;
+      color: #3F3F46;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 18px 0;
+      font-size: 13px;
+    }
+    th, td {
+      border: 1px solid var(--border);
+      padding: 10px 14px;
+      text-align: left;
+    }
+    th {
+      background: #F4F4F5;
+      font-weight: 700;
+    }
+    a {
+      color: var(--primary);
+      text-decoration: underline;
+      text-underline-offset: 2px;
+    }
+    a:hover {
+      color: var(--primary-dark);
+    }
+    .footer {
+      text-align: center;
+      font-size: 13px;
+      color: var(--text-muted);
+      margin-top: 32px;
+      padding-top: 24px;
+      border-top: 1px solid var(--border);
+    }
+  </style>
+</head>
+<body>
+
+  <header class="header">
+    <div class="header-inner">
+      <a href="#" class="brand">
+        <div class="brand-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M20 4H4c-1.11 0-2 .89-2 2v12c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V6c0-1.11-.89-2-2-2zm0 14H4V6h16v12zm-10-2l6-4-6-4v8z"/>
+          </svg>
+        </div>
+        <div class="brand-title">TubeKit<span>.</span></div>
+      </a>
+      <span class="badge">Google Play Compliant</span>
+    </div>
+  </header>
+
+  <main class="container">
+    <article class="card">
+
+      <header class="hero">
+        <h1>Privacy Policy</h1>
+        <div class="meta">
+          <span><strong>Application:</strong> TubeKit: Mobile Creator Toolkit</span>
+          <span><strong>Package Name:</strong> com.tubekit.creator</span>
+          <span><strong>Effective Date:</strong> October 2026</span>
+        </div>
+      </header>
+
+      <div class="alert">
+        <strong>Legal Disclaimer:</strong> TubeKit is an independent utility application developed to assist content creators. TubeKit is not affiliated with, endorsed by, sponsored by, or associated with YouTube, Google LLC, or Alphabet Inc. All YouTube logos, trademarks, and metadata belong to their respective owners.
+      </div>
+
+      <p>
+        At <strong>TubeKit</strong> ("we", "our", or "us"), your privacy is our highest priority. This Privacy Policy document outlines the types of information we collect, how it is used, and how we safeguard your data when you use our mobile application (<strong>com.tubekit.creator</strong>) and related services.
+      </p>
+
+      <h2>1. Information We Do NOT Collect</h2>
+      <p>
+        TubeKit is built on privacy-by-design principles:
+      </p>
+      <ul>
+        <li>We <strong>do not</strong> require users to register or create an account with personal credentials to use core features.</li>
+        <li>We <strong>do not</strong> access or store private YouTube channel logins, passwords, or personal YouTube account credentials.</li>
+        <li>We <strong>do not</strong> record, sell, rent, or monetize your personal search history or extracted asset URLs.</li>
+        <li>We <strong>do not</strong> collect sensitive data such as biometric identifiers, phone numbers, contact books, or precise GPS location.</li>
+      </ul>
+
+      <h2>2. Information We Collect & How It Is Used</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Data Type</th>
+            <th>Purpose</th>
+            <th>Storage Location</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Search & Analysis Queries</strong></td>
+            <td>To fetch public video tags, titles, descriptions, and thumbnails you request.</td>
+            <td>Processed transiently; stored strictly on your local device.</td>
+          </tr>
+          <tr>
+            <td><strong>App Preferences & Favorites</strong></td>
+            <td>To save your favorite tools, theme, and saved items for offline convenience.</td>
+            <td>Stored locally in your device's private storage (LocalStorage).</td>
+          </tr>
+          <tr>
+            <td><strong>Reward Points & XP</strong></td>
+            <td>Gamification features, streaks, and badges within the app.</td>
+            <td>Stored locally and optionally synced via anonymous creator ID.</td>
+          </tr>
+          <tr>
+            <td><strong>Device Advertising ID (AAID)</strong></td>
+            <td>Used solely by Google AdMob to deliver rewarded video ads.</td>
+            <td>Managed strictly by Google Play Services SDK.</td>
+          </tr>
+          <tr>
+            <td><strong>Push Notification Device Token</strong></td>
+            <td>To deliver occasional creator tips and trend alerts via OneSignal.</td>
+            <td>Managed anonymously by OneSignal SDK.</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h2>3. Third-Party Services & SDK Integrations</h2>
+      <p>
+        Our application integrates trusted third-party SDKs that may collect data in accordance with their respective privacy policies to deliver core functionality:
+      </p>
+
+      <h3>A. YouTube API Services</h3>
+      <p>
+        TubeKit utilizes official YouTube Data API v3 and public oEmbed endpoints to inspect public video metadata. By using TubeKit, you agree to be bound by the 
+        <a href="https://www.youtube.com/t/terms" target="_blank" rel="noopener">YouTube Terms of Service</a> and the 
+        <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy Policy</a>. TubeKit only accesses publicly available data on YouTube.
+      </p>
+
+      <h3>B. Google AdMob (Advertising)</h3>
+      <p>
+        We use Google AdMob to serve optional rewarded video advertisements, enabling creators to earn in-app utility credits. AdMob may process your device's Advertising Identifier (AAID) and basic device information to display relevant ads in compliance with Google Play Policies. For more information, please review the 
+        <a href="https://policies.google.com/technologies/ads" target="_blank" rel="noopener">Google Advertising Privacy Policy</a>.
+      </p>
+
+      <h3>C. OneSignal (Push Notifications)</h3>
+      <p>
+        We use OneSignal to send helpful optional notifications regarding creator trends and daily streak reminders. You may enable or disable notifications at any time via Android System Settings. View the 
+        <a href="https://onesignal.com/privacy_policy" target="_blank" rel="noopener">OneSignal Privacy Policy</a>.
+      </p>
+
+      <h2>4. Android Device Permissions</h2>
+      <p>
+        TubeKit only requests permissions that are strictly necessary to deliver its functionality:
+      </p>
+      <ul>
+        <li><strong>INTERNET & ACCESS_NETWORK_STATE:</strong> Essential for querying public YouTube metadata, loading thumbnails, and retrieving app updates.</li>
+        <li><strong>POST_NOTIFICATIONS (Android 13+):</strong> Allows the app to notify you of daily streaks and algorithm updates (User opt-in).</li>
+        <li><strong>WRITE_EXTERNAL_STORAGE (Android 9 & below only):</strong> Used solely when you choose to save a thumbnail image or transcript file directly to your device's Downloads folder. (Android 10+ uses secure Scoped Storage without requiring broad storage permissions).</li>
+        <li><strong>VIBRATE:</strong> Provides subtle haptic feedback on button interactions for enhanced user experience.</li>
+      </ul>
+
+      <h2>5. YouTube API Services & No-Stream-Ripping Policy</h2>
+      <p>
+        TubeKit strictly respects Google Play Developer Policies and the YouTube Terms of Service:
+      </p>
+      <ul>
+        <li>TubeKit <strong>does not</strong> download, convert, extract, or rip YouTube audio (MP3) or video streams (MP4).</li>
+        <li>TubeKit <strong>does not</strong> facilitate background playback of YouTube video or audio content.</li>
+        <li>All extracted metadata (transcripts, captions, thumbnails, tags) are public assets accessed strictly in accordance with YouTube API guidelines.</li>
+      </ul>
+
+      <h2>6. Data Retention and User Deletion Rights</h2>
+      <p>
+        Because all your search history, bookmarks, and preferences are stored locally on your device:
+      </p>
+      <ul>
+        <li>You can delete all history and favorites at any time directly in the app via <strong>Settings &gt; Clear All Cache &amp; History</strong>.</li>
+        <li>Uninstalling the app immediately deletes all locally stored data from your device.</li>
+        <li>If you have questions regarding data deletion, you may contact our support team at the email below.</li>
+      </ul>
+
+      <h2>7. Children's Privacy (COPPA Compliance)</h2>
+      <p>
+        TubeKit does not knowingly collect or solicit any personally identifiable information from children under the age of 13. If you believe that a child under 13 has provided personal data to our app, please contact us immediately, and we will take prompt steps to remove such information.
+      </p>
+
+      <h2>8. Changes to This Privacy Policy</h2>
+      <p>
+        We may update our Privacy Policy periodically to reflect app updates or regulatory requirements. Any modifications will be posted on this page with an updated "Effective Date". We encourage creators to review this policy periodically.
+      </p>
+
+      <h2>9. Contact Us</h2>
+      <p>
+        If you have questions, feedback, or inquiries regarding this Privacy Policy or your data, please contact us:
+      </p>
+      <ul>
+        <li><strong>Application:</strong> TubeKit: Mobile Creator Toolkit</li>
+        <li><strong>Developer Team:</strong> MediaToolz &amp; TubeKit Creator Team</li>
+        <li><strong>Email:</strong> <a href="mailto:hello@mediatoolz.xyz">hello@mediatoolz.xyz</a></li>
+        <li><strong>Website:</strong> <a href="https://mediatoolz.xyz" target="_blank" rel="noopener">https://mediatoolz.xyz</a></li>
+      </ul>
+
+      <footer class="footer">
+        <p>&copy; 2026 TubeKit &bull; MediaToolz. All rights reserved.</p>
+        <p style="margin-top: 4px; font-size: 11px;">Built in accordance with Google Play Developer Policy and YouTube API Terms of Service.</p>
+      </footer>
+
+    </article>
+  </main>
+
+</body>
+</html>
